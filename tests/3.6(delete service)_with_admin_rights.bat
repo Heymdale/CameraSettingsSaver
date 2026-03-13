@@ -1,0 +1,3 @@
+sc stop CameraSettingsService
+sc delete CameraSettingsService
+pause

@@ -1,0 +1,28 @@
+<Project>
+  <PropertyGroup>
+    <SolutionRoot>$(MSBuildThisFileDirectory)</SolutionRoot>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+
+    <!-- 1. Гарантируем слеш после конфигурации -->
+    <ConfigDir>$(SolutionRoot)$(Configuration)\</ConfigDir>
+  </PropertyGroup>
+
+  <!-- 2. Распределяем OutputPath со строгими слешами -->
+  <PropertyGroup Condition="'$(MSBuildProjectName)' == 'CameraSettingsSaver' OR '$(MSBuildProjectName)' == 'CameraSettingsWindowsService'">
+    <OutputPath>$(ConfigDir)bin\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(MSBuildProjectName)' == 'WebCamSettings'">
+    <OutputPath>$(ConfigDir)</OutputPath>
+  </PropertyGroup>
+
+  <!-- 3. Копируем ресурсы -->
+  <ItemGroup Condition="'$(MSBuildProjectName)' == 'CameraSettingsSaver'">
+    <Content Include="Resources\locales\*.json">
+      <!-- Теперь ..\ выйдет из \bin\ и попадет точно в $(ConfigDir)Resources\ -->
+      <Link>..\Resources\locales\%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

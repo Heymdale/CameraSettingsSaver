@@ -1,0 +1,13 @@
+### 🇺🇸 English
+
+1. First, run `link_creator.bat` from this folder — it will create the missing shortcuts.
+2. Each `.bat` or `.lnk` file corresponds to a row in `Tests.ods`.
+
+
+---
+
+
+### 🇷🇺 Русский
+
+1. В первую очередь запустите `link_creator.bat` из данной папки — он создаст недостающие ссылки.
+2. Каждый `.bat` или `.lnk` файл соответствует строке из `Тесты.ods`.
