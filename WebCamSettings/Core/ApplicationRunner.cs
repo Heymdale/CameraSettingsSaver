@@ -8,7 +8,7 @@ namespace WebCamSettings.Core
 {
     public class ApplicationRunner
     {
-        private const string DefaultLogFileName = "app.log";
+        private const string CriticalLogFileName = "critical.log";
         private readonly StartupMode _startupMode;
         private readonly ArgumentParser _argumentParser;
         private readonly ConsoleManager _consoleManager;
@@ -78,7 +78,7 @@ namespace WebCamSettings.Core
             {
                 _startupMode.CriticalStartupExceptions.Add("Cannot start console mode");
                 // Create a temporary logger to display the error
-                var tempLogger = new BasicLogger(DefaultLogFileName);
+                var tempLogger = new BasicLogger(CriticalLogFileName);
                 var tempDisplayer = new MessageDisplayer(tempLogger);
                 tempDisplayer.ShowCriticalErrors(_startupMode, false);
                 Environment.Exit(1);
@@ -137,7 +137,7 @@ namespace WebCamSettings.Core
             if (_startupMode.IsConsole || _startupMode.IsNoInterface || _startupMode.IsShowHelp)
             {
                 // Console mode - using BasicLogger
-                _logger = new BasicLogger(_startupMode.LogFile ?? DefaultLogFileName);
+                _logger = new BasicLogger(_startupMode.LogFile);
                 if (_startupMode.IsConsole || _startupMode.IsShowHelp)
                 {
                     _logger.EnableConsoleOutput();
@@ -146,7 +146,7 @@ namespace WebCamSettings.Core
             else
             {
                 // GUI mode - using FormsLogger
-                _logger = new FormsLogger(_startupMode.LogFile ?? DefaultLogFileName);
+                _logger = new FormsLogger(_startupMode.LogFile);
             }
 
             // Create a MessageDisplayer with a logger and localization

@@ -326,6 +326,7 @@ namespace WebCamSettings
         private void OnClearLogsRequested(object sender, EventArgs e)
         {
             _formsLogger.ClearLogs();
+            _formsLogger.UpdateTextBoxWithAllLogs();
         }
 
         private void OnCopyLogsRequested(object sender, EventArgs e)

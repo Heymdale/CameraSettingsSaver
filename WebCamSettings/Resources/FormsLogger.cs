@@ -34,7 +34,7 @@ namespace WebCamSettings.Resources
             }
         }
 
-        private void UpdateTextBoxWithAllLogs()
+        public void UpdateTextBoxWithAllLogs()
         {
             if (_logsTextBox != null && _isTextBoxReady && !_logsTextBox.IsDisposed)
             {

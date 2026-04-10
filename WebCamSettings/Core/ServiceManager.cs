@@ -131,7 +131,7 @@ namespace WebCamSettings.Core
 
                 var arguments = new List<string>
         {
-            $"/p \"{profilePath}\"",
+            $"/p \\\"{profilePath}\\\"",
             $"/lang {language.ToString().ToLower()}",
             $"/interval {intervalSeconds}"
         };
@@ -148,13 +148,13 @@ namespace WebCamSettings.Core
                     else
                     {
                         // If the path is specified, add /log with the path
-                        arguments.Add($"/log \"{logPath}\"");
+                        arguments.Add($"/log \\\"{logPath}\\\"");
                         _logger.Log($"Adding /log parameter with path: {logPath}");
                     }
                 }
 
                 string args = string.Join(" ", arguments);
-                string binPath = $"\"{_servicePath}\" {args}";
+                string binPath = $"\\\"{_servicePath}\\\" {args}";
 
                 _logger.Log($"Installing service with binPath: {binPath}");
 

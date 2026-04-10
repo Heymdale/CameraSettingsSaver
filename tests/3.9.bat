@@ -1,3 +1,3 @@
 cd %~dp0..\bin
-%CD%\CameraSettingsService.exe
+"%CD%\CameraSettingsService.exe"
 pause
