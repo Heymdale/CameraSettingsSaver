@@ -5,8 +5,8 @@ A utility for Windows designed to save and restore webcam settings. Supports a g
 Differs from most similar tools by saving settings such as "Power Line Frequency" and "Low Light Compensation".
 
 ## Video Instruction
-	🇷🇺 [Инструкция](https://youtu.be/eUSDQVTzXV0)
-	🇺🇸 [Instruction](https://youtu.be/rBldKu2XPqI)
+* 🇷🇺 [Инструкция](https://youtu.be/eUSDQVTzXV0)
+* 🇺🇸 [Instruction](https://youtu.be/rBldKu2XPqI)
 
 ## 🚀 Features
 
@@ -124,8 +124,8 @@ sc delete CameraSettingsService
 Отличается от большинства аналогов сохранением таких настроек как "Частота линии питания" и "Компенсация низкой освещённости".
 
 ## Video Instruction
-	🇷🇺 [Инструкция](https://youtu.be/eUSDQVTzXV0)
-	🇺🇸 [Instruction](https://youtu.be/rBldKu2XPqI)
+* 🇷🇺 [Инструкция](https://youtu.be/eUSDQVTzXV0)
+* 🇺🇸 [Instruction](https://youtu.be/rBldKu2XPqI)
 
 ## 🚀 Возможности
 
