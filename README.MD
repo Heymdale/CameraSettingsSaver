@@ -6,7 +6,7 @@ Differs from most similar tools by saving settings such as "Power Line Frequency
 
 ## Video Instruction
 	🇷🇺 https://youtu.be/eUSDQVTzXV0
-  🇺🇸 https://youtu.be/rBldKu2XPqI
+	🇺🇸 https://youtu.be/rBldKu2XPqI
 
 ## 🚀 Features
 
