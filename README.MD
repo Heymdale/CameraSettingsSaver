@@ -4,6 +4,10 @@ A utility for Windows designed to save and restore webcam settings. Supports a g
 
 Differs from most similar tools by saving settings such as "Power Line Frequency" and "Low Light Compensation".
 
+## Video Instruction
+	🇷🇺 https://youtu.be/eUSDQVTzXV0
+  🇺🇸 https://youtu.be/rBldKu2XPqI
+
 ## 🚀 Features
 
 - **Save/Apply:** Export current camera parameters to JSON and subsequently restore them.
